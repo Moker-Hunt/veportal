@@ -1,1 +1,115 @@
-.cookie-content a:hover,.cookie-content h3{color:var(--ambar)}.cookie-banner{position:fixed;bottom:-100%;left:0;right:0;background-color:var(--grafito-dark);color:var(--marfil);padding:0;z-index:9999;box-shadow:0 -5px 20px rgba(0,0,0,.3);transition:bottom .5s ease-in-out;border-top:3px solid var(--ambar);max-width:100%;width:100%}.cookie-banner.active{bottom:0}.cookie-content{padding:1.5rem;max-width:1200px;margin:0 auto}.cookie-content h3{margin-top:0;margin-bottom:1rem;font-size:1.5rem}.cookie-content p{margin-bottom:1.5rem;line-height:1.6}.cookie-content a{color:var(--terracota-light);text-decoration:underline;transition:color .3s}.cookie-buttons{display:flex;gap:1rem;flex-wrap:wrap}.cookie-buttons button{padding:.8rem 1.5rem;border:none;border-radius:5px;font-weight:700;cursor:pointer;transition:.3s}.cookie-buttons .btn-primary{background-color:var(--ambar);color:var(--grafito-dark)}.cookie-buttons .btn-primary:hover{background-color:var(--ambar-light)}.cookie-buttons .btn-secondary{background-color:transparent;color:var(--marfil);border:1px solid var(--marfil)}.cookie-buttons .btn-secondary:hover{background-color:rgba(255,255,255,.1)}body.cookie-blur::after{content:"";position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:9998}@media (max-width:576px){.cookie-content{padding:1rem}.cookie-content h3{font-size:1.3rem}.cookie-buttons{flex-direction:column}.cookie-buttons button{width:100%}}
+/* Стили для окна подтверждения cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: var(--grafito-dark);
+    color: var(--marfil);
+    padding: 0;
+    z-index: 9999;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+    transition: bottom 0.5s ease-in-out;
+    border-top: 3px solid var(--ambar);
+    max-width: 100%;
+    width: 100%;
+}
+
+.cookie-banner.active {
+    bottom: 0;
+}
+
+.cookie-content {
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cookie-content h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--ambar);
+    font-size: 1.5rem;
+}
+
+.cookie-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.cookie-content a {
+    color: var(--terracota-light);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.cookie-content a:hover {
+    color: var(--ambar);
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cookie-buttons button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cookie-buttons .btn-primary {
+    background-color: var(--ambar);
+    color: var(--grafito-dark);
+}
+
+.cookie-buttons .btn-primary:hover {
+    background-color: var(--ambar-light);
+}
+
+.cookie-buttons .btn-secondary {
+    background-color: transparent;
+    color: var(--marfil);
+    border: 1px solid var(--marfil);
+}
+
+.cookie-buttons .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Эффект размытия для страницы */
+body.cookie-blur::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9998;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 576px) {
+    .cookie-content {
+        padding: 1rem;
+    }
+    
+    .cookie-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .cookie-buttons {
+        flex-direction: column;
+    }
+    
+    .cookie-buttons button {
+        width: 100%;
+    }
+}

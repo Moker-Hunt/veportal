@@ -1,1 +1,90 @@
-.table-container{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:1.5rem;position:relative;background-color:var(--grafito-dark);border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,.2);padding:0;max-width:100%;display:block;scrollbar-width:thin;scrollbar-color:var(--ambar) var(--grafito-dark)}.table-container::-webkit-scrollbar{height:8px;background-color:var(--grafito-dark)}.table-container::-webkit-scrollbar-thumb{background-color:var(--ambar);border-radius:4px}.table-container::-webkit-scrollbar-track{background-color:var(--grafito-dark);border-radius:4px}.proyecciones-table{width:100%;min-width:600px;border-collapse:collapse;margin-bottom:0;background-color:var(--grafito-dark);color:var(--marfil)}.proyecciones-table td,.proyecciones-table th{padding:12px 15px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1);color:var(--marfil)}.proyecciones-table th{background-color:rgba(0,0,0,.2);font-weight:600;text-transform:uppercase;font-size:.9rem;letter-spacing:1px}.proyecciones-table tr:hover{background-color:rgba(255,255,255,.05)}@media (max-width:998px){.table-container{border-radius:6px;margin-bottom:1rem}.proyecciones-table td,.proyecciones-table th{padding:10px 12px;font-size:.9rem}}@media (max-width:576px){.table-container{border-radius:4px}.proyecciones-table td,.proyecciones-table th{padding:8px 10px;font-size:.85rem}}
+/* Стили для таблиц с горизонтальной прокруткой на мобильных устройствах */
+
+/* Обертка для таблицы */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1.5rem;
+    position: relative;
+    background-color: var(--grafito-dark);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    max-width: 100%;
+    display: block;
+    scrollbar-width: thin;
+    scrollbar-color: var(--ambar) var(--grafito-dark);
+}
+
+/* Стили для полосы прокрутки WebKit */
+.table-container::-webkit-scrollbar {
+    height: 8px;
+    background-color: var(--grafito-dark);
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: var(--ambar);
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: var(--grafito-dark);
+    border-radius: 4px;
+}
+
+/* Стили для таблицы */
+.proyecciones-table {
+    width: 100%;
+    min-width: 600px; /* Минимальная ширина для корректного отображения данных */
+    border-collapse: collapse;
+    margin-bottom: 0;
+    background-color: var(--grafito-dark);
+    color: var(--marfil);
+}
+
+.proyecciones-table th,
+.proyecciones-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--marfil);
+}
+
+.proyecciones-table th {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.proyecciones-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 998px) {
+    .table-container {
+        border-radius: 6px;
+        margin-bottom: 1rem;
+    }
+    
+    .proyecciones-table th,
+    .proyecciones-table td {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .table-container {
+        border-radius: 4px;
+    }
+    
+    .proyecciones-table th,
+    .proyecciones-table td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
