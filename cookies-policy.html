@@ -15,7 +15,14 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/context-styles.css">
     <link rel="stylesheet" href="css/device-styles.css">
+    <link rel="stylesheet" href="css/ratings.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dashboard-features.css">
+    <link rel="stylesheet" href="css/ecosystem.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/analysis.css">
+    <link rel="stylesheet" href="css/cookie-consent.css">
+    <link rel="stylesheet" href="css/cards-grid.css">
     
     <!-- Meta tags -->
     <meta name="keywords" content="política de cookies, cookies, privacidad, veportal">
@@ -134,6 +141,7 @@
     
     <div class="scroll-progress"></div>
 
+    <div id="page-content">
     <main>
         <section class="hero" style="min-height: 40vh; padding: 5rem 0 3rem;">
             <div class="hero-background">
@@ -268,112 +276,65 @@
             </div>
         </section>
     </main>
+    </div>
 
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <a href="index.html" class="logo-text">veportal<span class="logo-dot">.</span><span class="logo-org">org</span></a>
-                    </div>
-                    <p class="footer-description">Información financiera comparativa para usuarios exigentes en México.</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Navegación</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="simuladores.html">Simuladores</a></li>
-                        <li><a href="perfil-riesgo.html">Perfil de Riesgo</a></li>
-                        <li><a href="indicadores.html">Indicadores</a></li>
-                        <li><a href="about-us.html">Nosotros</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Legal</h3>
-                    <ul class="footer-links">
-                        <li><a href="terms-of-use.html">Términos de Uso</a></li>
-                        <li><a href="privacy-policy.html">Política de Privacidad</a></li>
-                        <li><a href="cookies-policy.html">Política de Cookies</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-title">Contacto</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <span class="contact-icon">📱</span>
-                            <a href="tel:+527793297203">+52 77 9329 7203</a>
-                        </li>
-                        <li>
-                            <span class="contact-icon">✉️</span>
-                            <a href="mailto:support@veportal.org">support@veportal.org</a>
-                        </li>
-                        <li>
-                            <span class="contact-icon">⏱️</span>
-                            <span>Lunes a Viernes: 9am - 6pm (CST)</span>
-                        </li>
-                    </ul>
-                </div>
+            <div class="footer-logo">
+                <span class="logo-text">veportal<span class="logo-accent">.org</span></span>
             </div>
-            
-            <div class="footer-bottom">
-                <div class="copyright">
-                    &copy; 2025 veportal.org. Todos los derechos reservados.
-                </div>
-                <div class="disclaimer">
-                    Este sitio no está afiliado con ninguna institución financiera y proporciona información con fines educativos únicamente.
-                </div>
+            <div class="footer-content">
+                <p>© 2025 veportal.org - Este sitio proporciona información comparativa y no está afiliado con ninguna institución gubernamental o financiera.</p>
+                <p>La información presentada tiene fines educativos e informativos únicamente y no constituye asesoría financiera.</p>
+                <p>Comparamos herramientas digitales para ayudarte a tomar decisiones informadas.</p>
+            <div class="footer-nav">
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="simuladores.html">Simuladores</a></li>
+                    <li><a href="perfil-riesgo.html">Perfil de Riesgo</a></li>
+                    <li><a href="indicadores.html">Indicadores</a></li>
+                    <li><a href="about-us.html">Nosotros</a></li>
+                </ul>
             </div>
+            <p class="copyright">Diseñado con <span class="heart">❤</span> en México</p>
         </div>
     </footer>
+    
+    <a href="#" class="back-to-top" aria-label="Volver arriba">
+        <i class="arrow-up"></i>
+    </a>
 
+    <script src="js/main.js"></script>
+    <script src="js/responsive.js"></script>
+    
     <script>
         // Cookie consent functionality
         document.addEventListener('DOMContentLoaded', function() {
             const cookieConsent = document.getElementById('cookie-consent');
             const acceptBtn = document.getElementById('accept-cookies');
             const rejectBtn = document.getElementById('reject-cookies');
+            const pageContent = document.getElementById('page-content');
             
             // Check if user has already made a choice
-            if (!localStorage.getItem('cookieChoice')) {
+            const cookieChoice = localStorage.getItem('cookieChoice');
+            
+            if (!cookieChoice) {
                 cookieConsent.classList.add('active');
-                document.body.classList.add('cookie-blur');
+                pageContent.classList.add('blurred');
             }
             
             acceptBtn.addEventListener('click', function() {
                 localStorage.setItem('cookieChoice', 'accepted');
                 cookieConsent.classList.remove('active');
-                document.body.classList.remove('cookie-blur');
+                pageContent.classList.remove('blurred');
+                // Here you would initialize analytics or other cookie-dependent scripts
             });
             
             rejectBtn.addEventListener('click', function() {
                 localStorage.setItem('cookieChoice', 'rejected');
                 cookieConsent.classList.remove('active');
-                document.body.classList.remove('cookie-blur');
+                pageContent.classList.remove('blurred');
             });
-        });
-        
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navList = document.querySelector('.nav-list');
-            
-            menuToggle.addEventListener('click', function() {
-                navList.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-            });
-        });
-        
-        // Scroll progress bar
-        window.addEventListener('scroll', function() {
-            const scrollProgress = document.querySelector('.scroll-progress');
-            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercentage = (scrollTop / scrollHeight) * 100;
-            
-            scrollProgress.style.width = scrollPercentage + '%';
         });
     </script>
 </body>

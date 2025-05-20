@@ -345,3 +345,64 @@
     color: var(--marfil-dark);
     font-style: italic;
 }
+
+/* Стили для таблиц с горизонтальной прокруткой */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+    min-width: 600px;
+}
+
+table th, table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--grafito-light);
+}
+
+table th {
+    background-color: var(--grafito-dark);
+    color: var(--marfil);
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Специальные стили для таблицы с cookies */
+.cookie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+    min-width: 600px;
+}
+
+.cookie-table th, .cookie-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--grafito-light);
+}
+
+.cookie-table th {
+    background-color: var(--grafito-dark);
+    color: var(--marfil);
+}
+
+.cookie-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
