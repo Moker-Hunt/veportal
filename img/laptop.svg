@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M50 30C50 24.4772 54.4772 20 60 20H540C545.523 20 550 24.4772 550 30V300H50V30Z" fill="#222222" stroke="#333333" stroke-width="6"/>
+  <rect x="70" y="40" width="460" height="240" fill="#111111"/>
+  <path d="M20 320C20 314.477 24.4772 310 30 310H570C575.523 310 580 314.477 580 320V350C580 355.523 575.523 360 570 360H30C24.4772 360 20 355.523 20 350V320Z" fill="#333333" stroke="#444444" stroke-width="4"/>
+  <rect x="270" y="330" width="60" height="10" rx="5" fill="#444444"/>
+</svg>

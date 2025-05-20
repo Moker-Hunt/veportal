@@ -1,0 +1,347 @@
+/* Стили для карточек и сеток контента */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: var(--grafito);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid var(--ciruela);
+    color: var(--marfil);
+    margin: 0 auto;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+    border-top-color: var(--ambar);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.feature-card h3 {
+    color: var(--ciruela);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover h3 {
+    color: var(--ambar-dark);
+    transform: translateY(-2px);
+}
+
+.feature-card p {
+    color: var(--marfil);
+    margin-bottom: 1.5rem;
+}
+
+.card-footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.availability {
+    font-size: 0.9rem;
+    color: var(--marfil);
+}
+
+.available {
+    color: var(--verde);
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: var(--ciruela-dark);
+    color: var(--marfil);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Улучшение стилей для content-grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.content-item {
+    background: var(--grafito);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid var(--ciruela);
+    color: var(--marfil);
+}
+
+.content-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+    border-top-color: var(--ambar);
+}
+
+.content-item h3 {
+    color: var(--ciruela);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.content-item:hover h3 {
+    color: var(--ambar-dark);
+    transform: translateY(-2px);
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.feature-icon {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+/* Стили для секций */
+.content-section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+.content-section.bg-alt {
+    background: var(--grafito-dark);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--marfil);
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+/* Стили для disclaimer */
+.disclaimer {
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 3px solid var(--ambar);
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.disclaimer-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--ambar);
+}
+
+.disclaimer p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--marfil);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .cards-grid,
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .content-section {
+        padding: 3rem 0;
+    }
+}
+
+
+.light-bg {
+    background: var(--marfil);
+}
+
+.dark-bg {
+    background: var(--grafito-dark);
+    color: var(--marfil);
+}
+
+/* Стили для steps-container */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    background: var(--grafito);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--ciruela);
+    color: var(--marfil);
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+    border-left-color: var(--ambar);
+}
+
+.step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: var(--ciruela);
+    color: var(--marfil);
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    margin-top: 0;
+    color: var(--ambar);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.step-content p {
+    margin-bottom: 1rem;
+    color: var(--marfil);
+}
+
+.step-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.step-content li {
+    margin-bottom: 0.5rem;
+    color: var(--marfil);
+}
+
+/* Стили для contact-grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    background: var(--grafito);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    text-align: center;
+    border-top: 3px solid var(--ciruela);
+    color: var(--marfil);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+    border-top-color: var(--ambar);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--ambar);
+}
+
+.contact-card h3 {
+    color: var(--ciruela);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.contact-card p {
+    margin-bottom: 1rem;
+    color: var(--marfil);
+}
+
+.contact-link {
+    display: inline-block;
+    color: var(--ambar);
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--ambar-dark);
+    text-decoration: underline;
+}
+
+.contact-hours {
+    font-size: 0.9rem;
+    color: var(--marfil-dark);
+    font-style: italic;
+}

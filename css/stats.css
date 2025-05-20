@@ -1,0 +1,83 @@
+/* Стили для секции со статистикой */
+.stats-section {
+    padding: 40px 0;
+    margin-top: 30px;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-top: 3px solid var(--ambar);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.stat-card:nth-child(2) {
+    border-top-color: var(--terracota);
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--ciruela);
+    margin-bottom: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.stat-description {
+    color: var(--grafito);
+    line-height: 1.5;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-description span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-description span:first-child {
+    color: var(--grafito-light);
+}
+
+.stat-description span:last-child {
+    color: var(--grafito-dark);
+    font-weight: 500;
+}
+
+/* Адаптивность */
+@media (max-width: 998px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .stat-value {
+        font-size: 2.5rem;
+    }
+}

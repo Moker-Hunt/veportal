@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía sencilla para monitorear indicadores económicos como tipo de cambio, tasas de interés y otros datos relevantes desde fuentes públicas mexicanas.">
+    <title>Monitoreo de indicadores económicos para usuarios curiosos | veportal.org</title>
+    
+    <!-- Precargar recursos críticos -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="fonts/BarlowCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/context-styles.css">
+    <link rel="stylesheet" href="css/device-styles.css">
+    <link rel="stylesheet" href="css/ratings.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dashboard-features.css">
+    <link rel="stylesheet" href="css/ecosystem.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/analysis.css">
+    <link rel="stylesheet" href="css/cookie-consent.css">
+    <link rel="stylesheet" href="css/table-styles.css">
+    <link rel="stylesheet" href="css/cards-grid.css">
+    
+    <!-- Meta tags -->
+    <meta name="keywords" content="indicadores económicos, tipo de cambio, tasas de interés, economía mexicana, monitoreo financiero">
+    <meta name="author" content="veportal.org">
+    
+    <!-- Optimización para móviles -->
+    <meta name="theme-color" content="#592E44">
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="cursor-follower"></div>
+    <div class="noise-overlay"></div>
+    <div id="cookie-consent" class="cookie-banner">
+        <div class="cookie-content">
+            <h3>Utilizamos cookies</h3>
+            <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestra <a href="privacy-policy.html">Política de Privacidad</a>, <a href="terms-of-use.html">Términos de Uso</a> y <a href="cookies-policy.html">Política de Cookies</a>.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn-primary">Aceptar</button>
+                <button id="reject-cookies" class="btn-secondary">Rechazar</button>
+            </div>
+        </div>
+    </div>
+    
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">veportal<span class="logo-dot">.</span><span class="logo-org">org</span></a>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-text="Inicio">Inicio</a></li>
+                    <li><a href="simuladores.html" class="nav-link" data-text="Simuladores">Simuladores</a></li>
+                    <li><a href="perfil-riesgo.html" class="nav-link" data-text="Perfil de Riesgo">Perfil de Riesgo</a></li>
+                    <li><a href="indicadores.html" class="nav-link active" data-text="Indicadores">Indicadores</a></li>
+                    <li><a href="about-us.html" class="nav-link" data-text="Nosotros">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="scroll-progress"></div>
+
+    <div id="page-content">
+    <main>
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-shape shape-1"></div>
+                <div class="hero-shape shape-2"></div>
+                <div class="hero-shape shape-3"></div>
+                <div class="hero-particles"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="glitch-text" data-text="Indicadores económicos">
+                        <span class="hero-title-main">Indicadores económicos</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Guía sencilla para monitorear datos financieros clave desde fuentes públicas mexicanas</h2>
+                    
+                    <div class="hero-cta">
+                        <a href="#tipos-indicadores" class="btn-primary">Ver indicadores</a>
+                        <a href="#fuentes-confiables" class="btn-secondary">Fuentes oficiales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="importancia" class="content-section">
+            <div class="container">
+                <h2 class="section-title">¿Por qué monitorear indicadores económicos?</h2>
+                <div class="section-subtitle">Beneficios para tus decisiones financieras cotidianas</div>
+                
+                <div class="content-grid">
+                    <div class="content-item">
+                        <h3>Relevancia para usuarios no especializados</h3>
+                        <p>Los indicadores económicos no son solo herramientas para expertos financieros. Como usuario común, seguir estos datos te permite:</p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon">💡</span>
+                                <span class="feature-text">Tomar decisiones más informadas sobre tus finanzas personales</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">🛒</span>
+                                <span class="feature-text">Anticipar cambios en precios de productos y servicios</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">💰</span>
+                                <span class="feature-text">Identificar momentos oportunos para inversiones o compras importantes</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">🔮</span>
+                                <span class="feature-text">Comprender mejor las tendencias económicas que afectan tu día a día</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-item">
+                        <h3>Enfoque práctico y accesible</h3>
+                        <p>Esta guía está diseñada para usuarios curiosos sin formación especializada en economía. Te mostraremos:</p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon">🔍</span>
+                                <span class="feature-text">Qué indicadores son realmente relevantes para tus decisiones cotidianas</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">🌐</span>
+                                <span class="feature-text">Dónde encontrar información confiable y gratuita</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">📊</span>
+                                <span class="feature-text">Cómo interpretar los datos básicos sin necesidad de análisis complejos</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">📱</span>
+                                <span class="feature-text">Herramientas y recursos accesibles para mantenerte informado</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tipos-indicadores" class="content-section bg-alt">
+            <div class="container">
+                <h2 class="section-title light-bg">Indicadores económicos clave para seguir</h2>
+                <div class="section-subtitle">Los datos más relevantes para usuarios no especializados</div>
+                
+                <div class="cards-grid">
+                    <div class="feature-card">
+                        <div class="card-icon">💱</div>
+                        <h3>Tipo de cambio</h3>
+                        <p>La relación entre el peso mexicano y otras monedas, principalmente el dólar estadounidense. Afecta precios de importaciones, viajes internacionales y remesas.</p>
+                        <div class="card-footer">
+                            <div class="tag-list">
+                                <span class="tag">Actualización diaria</span>
+                                <span class="tag">Alta relevancia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="card-icon">📈</div>
+                        <h3>Inflación (INPC)</h3>
+                        <p>Mide el aumento generalizado de precios de bienes y servicios. Impacta directamente en tu poder adquisitivo y en el valor real de tus ahorros e inversiones.</p>
+                        <div class="card-footer">
+                            <div class="tag-list">
+                                <span class="tag">Actualización mensual</span>
+                                <span class="tag">Alta relevancia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="card-icon">🏦</div>
+                        <h3>Tasa de interés de referencia</h3>
+                        <p>Establecida por el Banco de México, influye en las tasas de préstamos, hipotecas y rendimientos de inversiones. Clave para decisiones de ahorro y crédito.</p>
+                        <div class="card-footer">
+                            <div class="tag-list">
+                                <span class="tag">Actualización periódica</span>
+                                <span class="tag">Alta relevancia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="card-icon">⛽</div>
+                        <h3>Precios de energéticos</h3>
+                        <p>Incluye gasolina, diésel, gas y electricidad. Estos precios afectan tanto gastos directos como indirectos a través de bienes y servicios que consumes.</p>
+                        <div class="card-footer">
+                            <div class="tag-list">
+                                <span class="tag">Actualización semanal/mensual</span>
+                                <span class="tag">Media relevancia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="card-icon">💼</div>
+                        <h3>Tasa de desempleo</h3>
+                        <p>Porcentaje de la población económicamente activa sin empleo. Indicador de la salud económica general y la estabilidad del mercado laboral.</p>
+                        <div class="card-footer">
+                            <div class="tag-list">
+                                <span class="tag">Actualización trimestral</span>
+                                <span class="tag">Media relevancia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="card-icon">🏠</div>
+                        <h3>Índice de precios de vivienda</h3>
+                        <p>Refleja la evolución de los precios inmobiliarios en México. Esencial para decisiones relacionadas con compra, venta o inversión en propiedades.</p>
+                        <div class="card-footer">
+                            <div class="tag-list">
+                                <span class="tag">Actualización trimestral</span>
+                                <span class="tag">Media relevancia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fuentes-confiables" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Fuentes oficiales y confiables</h2>
+                <div class="section-subtitle">Dónde consultar información actualizada y precisa</div>
+                
+                <div class="table-container">
+                    <table class="proyecciones-table">
+                        <thead>
+                            <tr>
+                                <th>Institución</th>
+                                <th>Indicadores disponibles</th>
+                                <th>Frecuencia de actualización</th>
+                                <th>Facilidad de uso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Banco de México (Banxico)</td>
+                                <td>Tipo de cambio, tasas de interés, inflación, sistema financiero</td>
+                                <td>Diaria/Semanal/Mensual</td>
+                                <td>Media (interfaz mejorable)</td>
+                            </tr>
+                            <tr>
+                                <td>Instituto Nacional de Estadística y Geografía (INEGI)</td>
+                                <td>Inflación, empleo, PIB, indicadores económicos generales</td>
+                                <td>Mensual/Trimestral</td>
+                                <td>Media-Alta (buen buscador)</td>
+                            </tr>
+                            <tr>
+                                <td>Secretaría de Hacienda y Crédito Público (SHCP)</td>
+                                <td>Presupuesto público, deuda, finanzas gubernamentales</td>
+                                <td>Mensual/Trimestral</td>
+                                <td>Baja (navegación compleja)</td>
+                            </tr>
+                            <tr>
+                                <td>Comisión Nacional Bancaria y de Valores (CNBV)</td>
+                                <td>Sistema bancario, tasas de interés comerciales</td>
+                                <td>Mensual</td>
+                                <td>Baja (orientada a especialistas)</td>
+                            </tr>
+                            <tr>
+                                <td>Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF)</td>
+                                <td>Comparativos de productos financieros, alertas al consumidor</td>
+                                <td>Variable</td>
+                                <td>Alta (diseñada para usuarios)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="como-interpretar" class="content-section bg-alt">
+            <div class="container">
+                <h2 class="section-title light-bg">Cómo interpretar los indicadores</h2>
+                <div class="section-subtitle">Guía práctica para entender qué significan los datos</div>
+                
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Tipo de cambio</h3>
+                            <p><strong>Cómo interpretarlo:</strong> Un peso más débil frente al dólar (más pesos por dólar) generalmente significa:</p>
+                            <ul>
+                                <li>Productos importados más caros</li>
+                                <li>Viajes internacionales más costosos</li>
+                                <li>Mayor valor de remesas recibidas del extranjero</li>
+                                <li>Potencial aumento de inflación a mediano plazo</li>
+                            </ul>
+                            <p><strong>Dónde consultarlo:</strong> <a href="https://www.banxico.org.mx/tipcamb/main.do?page=tip&idioma=sp" target="_blank">Banxico - Tipo de cambio</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Inflación (INPC)</h3>
+                            <p><strong>Cómo interpretarla:</strong> Una inflación alta indica:</p>
+                            <ul>
+                                <li>Pérdida de poder adquisitivo</li>
+                                <li>Necesidad de rendimientos mayores en inversiones para mantener valor real</li>
+                                <li>Posible aumento futuro en tasas de interés</li>
+                            </ul>
+                            <p>Compara la inflación con el rendimiento de tus inversiones para saber si estás ganando o perdiendo en términos reales.</p>
+                            <p><strong>Dónde consultarla:</strong> <a href="https://www.inegi.org.mx/temas/inpc/" target="_blank">INEGI - Índice Nacional de Precios al Consumidor</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Tasa de interés de referencia</h3>
+                            <p><strong>Cómo interpretarla:</strong> Cuando Banxico aumenta esta tasa:</p>
+                            <ul>
+                                <li>Los créditos tienden a encarecerse</li>
+                                <li>Los rendimientos en instrumentos de renta fija suelen mejorar</li>
+                                <li>Puede ser una medida para controlar la inflación</li>
+                            </ul>
+                            <p>Lo contrario ocurre cuando la tasa baja.</p>
+                            <p><strong>Dónde consultarla:</strong> <a href="https://www.banxico.org.mx/politica-monetaria/d/%7B7A7DC9D6-6997-25A2-0612-C4FD0ECF3AE4%7D.pdf" target="_blank">Banxico - Tasa de interés objetivo</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Precios de energéticos</h3>
+                            <p><strong>Cómo interpretarlos:</strong> El aumento en estos precios:</p>
+                            <ul>
+                                <li>Impacta directamente en tu presupuesto de transporte y servicios básicos</li>
+                                <li>Eventualmente se traslada a otros productos y servicios</li>
+                                <li>Puede ser indicador adelantado de presiones inflacionarias</li>
+                            </ul>
+                            <p><strong>Dónde consultarlos:</strong> <a href="https://www.gob.mx/cre/articulos/precios-vigentes-de-gasolinas-y-diesel" target="_blank">CRE - Precios de gasolinas y diésel</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Tasa de desempleo</h3>
+                            <p><strong>Cómo interpretarla:</strong> Un aumento sostenido puede indicar:</p>
+                            <ul>
+                                <li>Desaceleración económica</li>
+                                <li>Mayor competencia en el mercado laboral</li>
+                                <li>Posible reducción en el consumo general</li>
+                            </ul>
+                            <p>Observa también la tasa de subocupación y empleo informal para un panorama más completo.</p>
+                            <p><strong>Dónde consultarla:</strong> <a href="https://www.inegi.org.mx/temas/empleo/" target="_blank">INEGI - Ocupación y Empleo</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="herramientas" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Herramientas y recursos para monitoreo</h2>
+                <div class="section-subtitle">Opciones prácticas para usuarios no especializados</div>
+                
+                <div class="content-grid">
+                    <div class="content-item">
+                        <h3>Aplicaciones móviles recomendadas</h3>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon">📱</span>
+                                <span class="feature-text"><strong>Banxico Móvil:</strong> Aplicación oficial del Banco de México con indicadores actualizados.</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">📱</span>
+                                <span class="feature-text"><strong>INEGI Móvil:</strong> Datos estadísticos oficiales en formato accesible.</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">📱</span>
+                                <span class="feature-text"><strong>Dólar Hoy MX:</strong> Seguimiento simple del tipo de cambio con alertas personalizables.</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">📱</span>
+                                <span class="feature-text"><strong>Gasoapp:</strong> Precios de combustibles por zona geográfica.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-item">
+                        <h3>Consejos para un monitoreo efectivo</h3>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon">⏰</span>
+                                <span class="feature-text"><strong>Establece una rutina:</strong> Revisa los indicadores más relevantes para ti en intervalos regulares (semanal o mensual).</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">📊</span>
+                                <span class="feature-text"><strong>Observa tendencias:</strong> Más importante que el valor puntual es la dirección y velocidad del cambio.</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">🔔</span>
+                                <span class="feature-text"><strong>Configura alertas:</strong> Utiliza aplicaciones que te notifiquen cuando un indicador alcance cierto nivel.</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">📝</span>
+                                <span class="feature-text"><strong>Lleva un registro simple:</strong> Anota cómo los cambios en indicadores afectan tu economía personal.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="disclaimer dark-bg">
+                    <div class="disclaimer-icon">ⓘ</div>
+                    <p>Recuerda que los indicadores económicos son herramientas de información, no de predicción exacta. Úsalos como una guía complementaria a tu planificación financiera.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <span class="logo-text">veportal<span class="logo-accent">.org</span></span>
+            </div>
+            <div class="footer-content">
+                <p>© 2025 veportal.org - Este sitio proporciona información comparativa y no está afiliado con ninguna institución gubernamental o financiera.</p>
+                <p>La información presentada tiene fines educativos e informativos únicamente y no constituye asesoría financiera.</p>
+                <p>Comparamos herramientas digitales para ayudarte a tomar decisiones informadas.</p>
+            </div>
+            <div class="footer-nav">
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="simuladores.html">Simuladores</a></li>
+                    <li><a href="perfil-riesgo.html">Perfil de Riesgo</a></li>
+                    <li><a href="indicadores.html">Indicadores</a></li>
+                    <li><a href="about-us.html">Nosotros</a></li>
+                </ul>
+            </div>
+            <p class="copyright">Diseñado con <span class="heart">❤</span> en México</p>
+        </div>
+    </footer>
+    
+    <a href="#" class="back-to-top" aria-label="Volver arriba">
+        <i class="arrow-up"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/responsive.js"></script>
+    
+    <script>
+        // Cookie consent functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookie-consent');
+            const acceptBtn = document.getElementById('accept-cookies');
+            const rejectBtn = document.getElementById('reject-cookies');
+            const pageContent = document.getElementById('page-content');
+            
+            // Check if user has already made a choice
+            const cookieChoice = localStorage.getItem('cookieChoice');
+            
+            if (!cookieChoice) {
+                cookieConsent.classList.add('active');
+                pageContent.classList.add('blurred');
+            }
+            
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieChoice', 'accepted');
+                cookieConsent.classList.remove('active');
+                pageContent.classList.remove('blurred');
+                // Here you would initialize analytics or other cookie-dependent scripts
+            });
+            
+            rejectBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieChoice', 'rejected');
+                cookieConsent.classList.remove('active');
+                pageContent.classList.remove('blurred');
+            });
+        });
+    </script>
+</body>
+</html>
