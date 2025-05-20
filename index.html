@@ -6,7 +6,7 @@
     <meta name="description" content="Análisis exhaustivo y comparación innovadora de las herramientas digitales de vepormas y bx+ para usuarios exigentes que buscan maximizar su experiencia financiera en México.">
     <meta name="keywords" content="vepormas, bx+">
     <title>Herramientas avanzadas de vepormas y bx+: comparación para usuarios exigentes</title>
-    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="css/styles.css" as="style" media="print" onload="this.media='all'">
     <link rel="preload" href="fonts/BarlowCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
@@ -1473,34 +1473,11 @@
         <i class="arrow-up"></i>
     </a>
     
-    <script src="js/main.js"></script>
-    <script src="js/responsive.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/responsive.js" defer></script>
     
     <script>
-        // Cookie consent functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const cookieConsent = document.getElementById('cookie-consent');
-            const acceptBtn = document.getElementById('accept-cookies');
-            const rejectBtn = document.getElementById('reject-cookies');
-            
-            // Check if user has already made a choice
-            if (!localStorage.getItem('cookieChoice')) {
-                cookieConsent.classList.add('active');
-                document.body.classList.add('cookie-blur');
-            }
-            
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieChoice', 'accepted');
-                cookieConsent.classList.remove('active');
-                document.body.classList.remove('cookie-blur');
-            });
-            
-            rejectBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieChoice', 'rejected');
-                cookieConsent.classList.remove('active');
-                document.body.classList.remove('cookie-blur');
-            });
-        });
+        document.addEventListener("DOMContentLoaded",function(){let e=document.getElementById("cookie-consent"),t=document.getElementById("accept-cookies"),c=document.getElementById("reject-cookies");localStorage.getItem("cookieChoice")||(e.classList.add("active"),document.body.classList.add("cookie-blur")),t.addEventListener("click",function(){localStorage.setItem("cookieChoice","accepted"),e.classList.remove("active"),document.body.classList.remove("cookie-blur")}),c.addEventListener("click",function(){localStorage.setItem("cookieChoice","rejected"),e.classList.remove("active"),document.body.classList.remove("cookie-blur")})});
     </script>
 </body>
 </html>
